@@ -39,7 +39,7 @@ async fn function_handler(event: LambdaEvent<Request>) -> Result<Response, Error
     let client = aws_sdk_s3::Client::new(&config);
     let bucket_resp = get_buckets(&client).await?;
     for bucket in bucket_resp.into_iter() {
-        _ = list_objects(&client, &bucket).await?;
+        let _ = list_objects(&client, &bucket).await?;
     }
 
     // Return `Response` (it will be serialized to JSON automatically by the runtime)
