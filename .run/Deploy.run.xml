@@ -1,6 +1,6 @@
 ﻿<component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Deploy" type="ShConfigurationType">
-    <option name="SCRIPT_TEXT" value="cargo lambda build --release --arm64; cargo lambda deploy;" />
+    <option name="SCRIPT_TEXT" value="cargo lambda build --release --arm64; cargo lambda deploy --iam-role arn:aws:iam::374022087259:role/cargo-lambda-role-237eb490-a8f0-4b64-887b-dfbfc804992a;" />
     <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
     <option name="SCRIPT_PATH" value="" />
     <option name="SCRIPT_OPTIONS" value="" />
